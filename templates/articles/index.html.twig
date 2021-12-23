@@ -1,6 +1,26 @@
 {% extends 'base.html.twig' %}
 {% block title%} SymfArt Articles {%endblock%}
 {% block body%}
-
-<h1>Articles</h1>
+    {% if articles %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Article Title</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for articles in articles %}
+                <tr>
+                    <td>
+                    {{ articles }}
+                    </td>
+                    <td><a href="/article/{id}" class="btn btn-dark"> Show</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No articles found to display. </p>
+    {% endif %}
 {%endblock%}
