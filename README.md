@@ -1,2 +1,2 @@
 # symfart
-A basic Journa CRUD application using php/Symfony framework.
+A basic Journal CRUD application using php/Symfony framework.
